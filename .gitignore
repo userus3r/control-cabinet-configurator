@@ -4,3 +4,6 @@ main.py
 my_database.db
 /rs24_prices.sqlite
 /schema.sql
+/prices_skaf.session.sql
+/cabinets_con.session.sql
+/README.md
