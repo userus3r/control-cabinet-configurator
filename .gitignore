@@ -1,0 +1,20 @@
+# Виртуальное окружение Python
+.venv/
+
+# Служебные файлы Python
+__pycache__/
+*.py[cod]
+
+# Кеши тестов и проверок
+.pytest_cache/
+.ruff_cache/
+
+# Локальные базы и журналы
+*.db
+*.sqlite
+*.log
+
+# Результаты сборки приложения
+build/
+dist/
+*.egg-info/
