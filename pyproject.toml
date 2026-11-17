@@ -1,0 +1,17 @@
+# Тут описывается все, что нам нужно. Обычно это requirements.txt, по ходу дела будет изменяться, если что-то меняем
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "control-cabinet-configurator"
+version = "0.1.0"
+description = "Desktop-приложение для расчёта стоимости шкафов управления"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "PySide6>=6.10,<7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
