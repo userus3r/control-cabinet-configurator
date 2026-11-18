@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/cabinet_configurator/__init__.py
+src/cabinet_configurator/database.py
+src/cabinet_configurator/main.py
+src/cabinet_configurator/models.py
+src/control_cabinet_configurator.egg-info/PKG-INFO
+src/control_cabinet_configurator.egg-info/SOURCES.txt
+src/control_cabinet_configurator.egg-info/dependency_links.txt
+src/control_cabinet_configurator.egg-info/requires.txt
+src/control_cabinet_configurator.egg-info/top_level.txt

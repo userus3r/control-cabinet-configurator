@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:SQLite}/db/rs24_prices.sqlite",
+            "name": "prices_skaf"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:SQLite}/db/cabinets_3nf.sqlite",
+            "name": "cabinets_con"
+        }
+    ]
+}

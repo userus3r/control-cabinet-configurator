@@ -1,20 +1,10 @@
-# Виртуальное окружение Python
-.venv/
-
-# Служебные файлы Python
-__pycache__/
-*.py[cod]
-
-# Кеши тестов и проверок
-.pytest_cache/
-.ruff_cache/
-
-# Локальные базы и журналы
-*.db
-*.sqlite
-*.log
-
-# Результаты сборки приложения
-build/
-dist/
-*.egg-info/
+db_view.py
+lknp.session.sql
+main.py
+my_database.db
+/rs24_prices.sqlite
+/schema.sql
+/prices_skaf.session.sql
+/cabinets_con.session.sql
+/README.md
+/.venv
