@@ -1,0 +1,10 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE source_files(source_id INTEGER PRIMARY KEY,file_name TEXT NOT NULL UNIQUE);
+CREATE TABLE cabinets(cabinet_id INTEGER PRIMARY KEY,dimensions TEXT NOT NULL,description TEXT NOT NULL);
+CREATE TABLE components(component_id INTEGER PRIMARY KEY,article TEXT UNIQUE,name TEXT NOT NULL);
+CREATE TABLE categories(category_id INTEGER PRIMARY KEY,name TEXT NOT NULL UNIQUE);
+CREATE TABLE component_categories(component_id INTEGER REFERENCES components,category_id INTEGER REFERENCES categories,PRIMARY KEY(component_id,category_id));
+CREATE TABLE cabinet_components(cabinet_id INTEGER REFERENCES cabinets,component_id INTEGER REFERENCES components,quantity REAL CHECK(quantity>0),PRIMARY KEY(cabinet_id,component_id));
+CREATE TABLE source_records(record_id INTEGER PRIMARY KEY,source_id INTEGER NOT NULL REFERENCES source_files,location TEXT NOT NULL,component_id INTEGER REFERENCES components,original_name TEXT NOT NULL,original_article TEXT,notes TEXT,UNIQUE(source_id,location));
+CREATE VIEW v_cabinet_composition AS SELECT c.cabinet_id,c.description AS cabinet,c.dimensions,p.article,p.name,cc.quantity FROM cabinet_components cc JOIN cabinets c USING(cabinet_id) JOIN components p USING(component_id);
+CREATE VIEW v_accessories AS SELECT p.component_id,p.article,p.name,g.name AS category FROM component_categories pc JOIN components p USING(component_id) JOIN categories g USING(category_id);
