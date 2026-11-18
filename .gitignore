@@ -7,3 +7,4 @@ my_database.db
 /prices_skaf.session.sql
 /cabinets_con.session.sql
 /README.md
+/.venv
